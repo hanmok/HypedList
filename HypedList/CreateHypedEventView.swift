@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct CreateHypedEventView: View {
-    
+
     @StateObject var hypedEvent = HypedEvent()
-    
+// a small change
     var body: some View {
         Form {
             Section {
