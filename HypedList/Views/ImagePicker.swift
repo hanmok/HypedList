@@ -40,7 +40,7 @@ struct ImagePicker: UIViewControllerRepresentable {
                 parent.imageData = image.pngData()
             }
             
-            parent.presentationMode.wrappedValue.dismiss()
+            parent.presentationMode.wrappedValue.dismiss() // wrappedValue:  A projection of the binding value that returns a binding.
         }
     }
     

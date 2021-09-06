@@ -17,19 +17,26 @@ struct HypedListTabView: View {
                     Image(systemName: "calendar")
                     Text("Upcoming")
                 }
-            Text("Hello 2")
+            NavigationView {
+                DiscoverView()
+            }
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Discover")
                 }
-            Text("Hello 3")
+            NavigationView {
+                PastView()
+            }
                 .tabItem {
                     Image(systemName: "gobackward")
                     Text("Past")
                 }
             
+        }.onAppear() {
+            print("TabView appeared")
         }
     }
+
 }
 
 struct HypedListTabView_Previews: PreviewProvider {

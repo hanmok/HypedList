@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,30 @@
 		9A9418AA26DB3A7700AE6A86 /* HypedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9418A926DB3A7700AE6A86 /* HypedEvent.swift */; };
 		9A9418AC26DB4C8600AE6A86 /* FormLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9418AB26DB4C8600AE6A86 /* FormLabelView.swift */; };
 		E525C60126DB858A003AD765 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525C60026DB858A003AD765 /* ImagePicker.swift */; };
+		E53150C426DDBB2D0047A365 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53150C326DDBB2D0047A365 /* HypedEventTileView.swift */; };
+		E53150C726DDF77A0047A365 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = E53150C626DDF77A0047A365 /* SwiftDate */; };
+		E53150C926DDFC770047A365 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53150C826DDFC770047A365 /* DataController.swift */; };
+		E537C0F426E5BFD600E46EAE /* UIColorHexSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E537C0F326E5BFD600E46EAE /* UIColorHexSwift */; };
+		E537C0F526E5BFD600E46EAE /* UIColorHexSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = E537C0F326E5BFD600E46EAE /* UIColorHexSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E537C0F826E5C71A00E46EAE /* HypedEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537C0F726E5C71A00E46EAE /* HypedEventListView.swift */; };
+		E537C0FA26E5C9B700E46EAE /* PastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537C0F926E5C9B700E46EAE /* PastView.swift */; };
+		E537C0FC26E603C800E46EAE /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537C0FB26E603C800E46EAE /* DiscoverView.swift */; };
+		E537C0FE26E6083B00E46EAE /* HypedEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537C0FD26E6083B00E46EAE /* HypedEventDetailView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E537C0F626E5BFD600E46EAE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E537C0F526E5BFD600E46EAE /* UIColorHexSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9A94187826DA833900AE6A86 /* HypedList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypedList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +53,12 @@
 		9A9418A926DB3A7700AE6A86 /* HypedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEvent.swift; sourceTree = "<group>"; };
 		9A9418AB26DB4C8600AE6A86 /* FormLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabelView.swift; sourceTree = "<group>"; };
 		E525C60026DB858A003AD765 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E53150C326DDBB2D0047A365 /* HypedEventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventTileView.swift; sourceTree = "<group>"; };
+		E53150C826DDFC770047A365 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		E537C0F726E5C71A00E46EAE /* HypedEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventListView.swift; sourceTree = "<group>"; };
+		E537C0F926E5C9B700E46EAE /* PastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastView.swift; sourceTree = "<group>"; };
+		E537C0FB26E603C800E46EAE /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		E537C0FD26E6083B00E46EAE /* HypedEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E537C0F426E5BFD600E46EAE /* UIColorHexSwift in Frameworks */,
+				E53150C726DDF77A0047A365 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,11 +95,8 @@
 			children = (
 				9A94187B26DA833900AE6A86 /* HypedListApp.swift */,
 				9A94187D26DA833900AE6A86 /* HypedListTabView.swift */,
-				9A9418A526DB339400AE6A86 /* UpcomingView.swift */,
-				E525C60026DB858A003AD765 /* ImagePicker.swift */,
-				9A9418A726DB39D200AE6A86 /* CreateHypedEventView.swift */,
-				9A9418AB26DB4C8600AE6A86 /* FormLabelView.swift */,
-				9A9418A926DB3A7700AE6A86 /* HypedEvent.swift */,
+				E537C0F126E5BBD700E46EAE /* Views */,
+				E537C0F026E5BBC400E46EAE /* Data */,
 				9A94187F26DA833C00AE6A86 /* Assets.xcassets */,
 				9A94188426DA833C00AE6A86 /* Info.plist */,
 				9A94188126DA833C00AE6A86 /* Preview Content */,
@@ -84,6 +112,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E537C0F026E5BBC400E46EAE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E53150C826DDFC770047A365 /* DataController.swift */,
+				9A9418A926DB3A7700AE6A86 /* HypedEvent.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E537C0F126E5BBD700E46EAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E537C0F726E5C71A00E46EAE /* HypedEventListView.swift */,
+				9A9418A526DB339400AE6A86 /* UpcomingView.swift */,
+				E537C0F926E5C9B700E46EAE /* PastView.swift */,
+				E537C0FB26E603C800E46EAE /* DiscoverView.swift */,
+				9A9418A726DB39D200AE6A86 /* CreateHypedEventView.swift */,
+				E53150C326DDBB2D0047A365 /* HypedEventTileView.swift */,
+				E525C60026DB858A003AD765 /* ImagePicker.swift */,
+				9A9418AB26DB4C8600AE6A86 /* FormLabelView.swift */,
+				E537C0FD26E6083B00E46EAE /* HypedEventDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,12 +147,17 @@
 				9A94187426DA833900AE6A86 /* Sources */,
 				9A94187526DA833900AE6A86 /* Frameworks */,
 				9A94187626DA833900AE6A86 /* Resources */,
+				E537C0F626E5BFD600E46EAE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = HypedList;
+			packageProductDependencies = (
+				E53150C626DDF77A0047A365 /* SwiftDate */,
+				E537C0F326E5BFD600E46EAE /* UIColorHexSwift */,
+			);
 			productName = HypedList;
 			productReference = 9A94187826DA833900AE6A86 /* HypedList.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +185,10 @@
 				Base,
 			);
 			mainGroup = 9A94186F26DA833900AE6A86;
+			packageReferences = (
+				E53150C526DDF77A0047A365 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				E537C0F226E5BFD600E46EAE /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */,
+			);
 			productRefGroup = 9A94187926DA833900AE6A86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,13 +215,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53150C426DDBB2D0047A365 /* HypedEventTileView.swift in Sources */,
 				9A9418AC26DB4C8600AE6A86 /* FormLabelView.swift in Sources */,
+				E537C0FA26E5C9B700E46EAE /* PastView.swift in Sources */,
 				9A94187E26DA833900AE6A86 /* HypedListTabView.swift in Sources */,
 				9A9418AA26DB3A7700AE6A86 /* HypedEvent.swift in Sources */,
+				E53150C926DDFC770047A365 /* DataController.swift in Sources */,
 				E525C60126DB858A003AD765 /* ImagePicker.swift in Sources */,
 				9A94187C26DA833900AE6A86 /* HypedListApp.swift in Sources */,
 				9A9418A826DB39D200AE6A86 /* CreateHypedEventView.swift in Sources */,
+				E537C0F826E5C71A00E46EAE /* HypedEventListView.swift in Sources */,
+				E537C0FE26E6083B00E46EAE /* HypedEventDetailView.swift in Sources */,
 				9A9418A626DB339400AE6A86 /* UpcomingView.swift in Sources */,
+				E537C0FC26E603C800E46EAE /* DiscoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +416,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E53150C526DDF77A0047A365 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+		E537C0F226E5BFD600E46EAE /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeahdongcn/UIColor-Hex-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E53150C626DDF77A0047A365 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E53150C526DDF77A0047A365 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		E537C0F326E5BFD600E46EAE /* UIColorHexSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E537C0F226E5BFD600E46EAE /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */;
+			productName = UIColorHexSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A94187026DA833900AE6A86 /* Project object */;
 }
