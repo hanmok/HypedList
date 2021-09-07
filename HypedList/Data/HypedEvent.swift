@@ -14,12 +14,12 @@ import UIColorHexSwift
 //ObservableObject will provide you with a binding to any contained property automatically via the $-prefix syntax:
 class HypedEvent: ObservableObject, Identifiable, Codable { // similar to viewModel ? ?
     
-    var id = UUID().uuidString // universally unique id. 
+    @Published var id = UUID().uuidString // universally unique id. 
     
-    var date = Date()
-    var title = ""
-    var url = ""
-    var color = Color.purple // color is  not encodable by default.
+    @Published var date = Date()
+    @Published var title = ""
+    @Published var url = ""
+    @Published var color = Color.purple // color is  not encodable by default.
     
     @Published var imageData : Data?
     
@@ -64,6 +64,19 @@ class HypedEvent: ObservableObject, Identifiable, Codable { // similar to viewMo
     
     init() {
         
+    }
+    
+    var hasBeenAdded: Bool {
+        // first element of collection
+        let hypedEvent = DataController.shared.hypedEvents.first { hypedEvent -> Bool in
+            return hypedEvent.id == self.id
+        }
+
+        if hypedEvent != nil {
+            return true
+        } else {
+            return false
+        }
     }
     
     func image() -> Image? {

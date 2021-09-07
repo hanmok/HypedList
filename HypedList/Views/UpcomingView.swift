@@ -17,22 +17,6 @@ struct UpcomingView: View {
     @ObservedObject var data = DataController.shared
     
     var body: some View {
-//        ScrollView {
-//            VStack {
-//                if data.hypedEvents.count == 0 {
-//                    Text("Nothing to look forward to 🥲\n Create event or checkout the Discover tab!")
-//                        .bold()
-//                        .multilineTextAlignment(.center)
-//                } else {
-//                    ForEach(data.hypedEvents) { hypedEvent in
-//                        HypedEventTileView(hypedEvent: hypedEvent)
-//                    }
-//                }
-//            }
-//        }
-        
-        
-//        Text("This is upcoming View!!")
         
         HypedEventListView(hypedEvents: data.upcomingHypedEvents, noEventsTEXT: "Nothing to look forward to \n Create an event or check out the Discover tab! ")
             .navigationTitle("Upcoming")
@@ -45,7 +29,9 @@ struct UpcomingView: View {
                                     }.sheet(isPresented: $showingCreateView, content: {
                                         CreateHypedEventView()
                                     })
-            )
+            ).onAppear(){
+                print("hypedEvents: \(data.upcomingHypedEvents)")
+            }
     }
 }
 

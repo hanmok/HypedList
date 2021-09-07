@@ -112,6 +112,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E52DADF026E6FD2400B7AD3D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9A9418AB26DB4C8600AE6A86 /* FormLabelView.swift */,
+				E53150C326DDBB2D0047A365 /* HypedEventTileView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		E537C0F026E5BBC400E46EAE /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,10 +138,9 @@
 				E537C0F926E5C9B700E46EAE /* PastView.swift */,
 				E537C0FB26E603C800E46EAE /* DiscoverView.swift */,
 				9A9418A726DB39D200AE6A86 /* CreateHypedEventView.swift */,
-				E53150C326DDBB2D0047A365 /* HypedEventTileView.swift */,
 				E525C60026DB858A003AD765 /* ImagePicker.swift */,
-				9A9418AB26DB4C8600AE6A86 /* FormLabelView.swift */,
 				E537C0FD26E6083B00E46EAE /* HypedEventDetailView.swift */,
+				E52DADF026E6FD2400B7AD3D /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";

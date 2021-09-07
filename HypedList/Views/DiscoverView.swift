@@ -15,7 +15,7 @@ struct DiscoverView: View {
     var body: some View {
         HypedEventListView(hypedEvents: data.discoverHypedEvents.sorted {
             $0.date < $1.date
-        }, noEventsTEXT: "Loading some awesome stuff for ya!")
+        }, noEventsTEXT: "Loading some awesome stuff for ya!", isDiscover: true)
         .navigationTitle("Discover")
         .navigationBarItems(trailing:
                                 Button(action:{

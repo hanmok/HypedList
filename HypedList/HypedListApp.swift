@@ -15,7 +15,7 @@ struct HypedListApp: App {
                 .onAppear {
                     DataController.shared.loadData()
 //                    print("hypedListTabView in on appear ! ")
-//                    DataController.shared.getDiscoverEvents()
+                    DataController.shared.getDiscoverEvents()
                 }
         }
     }

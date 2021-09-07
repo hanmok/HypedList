@@ -17,9 +17,11 @@ class DataController: ObservableObject {
     @Published var discoverHypedEvents: [HypedEvent] = []
     
     var upcomingHypedEvents: [HypedEvent] {
-        return hypedEvents.filter{ $0.date > Date().dateAt(.startOfDay)}.sorted {
-            $0.date < $1.date
-        }
+
+            return hypedEvents.filter{ $0.date > Date().dateAt(.startOfDay)}.sorted {
+                $0.date < $1.date
+            }
+//        return hypedEvents
     }
     
     var pastHypedEvents: [HypedEvent] {
@@ -27,7 +29,22 @@ class DataController: ObservableObject {
             $0.date > $1.date
         }
     }
+    
+    func deleteHypedEvent(hypedEvent: HypedEvent) {
+        if let index = hypedEvents.firstIndex(where: { loopingHypedEvent -> Bool in
+            return hypedEvent.id == loopingHypedEvent.id
+        }) {
+            hypedEvents.remove(at: index)
+        }
+        saveData()
+    }
 
+    func addFromDiscover(hypedEvent: HypedEvent) {
+        hypedEvents.append(hypedEvent)
+        hypedEvent.objectWillChange.send() // send notification that it will change its property.
+        saveData()
+    }
+    
 //    var discoverHypedEventsSorted: [HypedEvent] {
 //        return discoverHypedEvents
 //
@@ -39,6 +56,17 @@ class DataController: ObservableObject {
     
     
     static var shared = DataController()
+    
+    func saveHypedEvent(hypedEvent: HypedEvent) {
+        if let index = hypedEvents.firstIndex(where: { loopingHypedEvent -> Bool in
+            return hypedEvent.id == loopingHypedEvent.id
+        }) {
+            hypedEvents[index] = hypedEvent
+        } else {
+            hypedEvents.append(hypedEvent)
+        }
+        saveData()
+    }
     
     // if we don't specify, everything happens in main thread.
     func saveData() {
@@ -68,6 +96,9 @@ class DataController: ObservableObject {
         if let url = URL(string: "https://api.jsonbin.io/b/5f7e1e0565b18913fc5c408c/latest") {
         let request = URLRequest(url: url)
             
+//            DispatchQueue.global().async {
+                 
+            
             URLSession.shared.dataTask(with: request) { data, response, error in
                 if let webData = data {
                     if let json = try? JSONSerialization.jsonObject(with: webData, options: []) as? [[String: String]] {
@@ -82,8 +113,9 @@ class DataController: ObservableObject {
                             }
                             
                             if let dateString = jsonHypedEvent["date"] {
+                                SwiftDate.defaultRegion = Region.local
                                 if let dateInRegion = dateString.toDate() {
-                                    hypedEvent.date = dateInRegion.date
+                                    hypedEvent.date = dateInRegion.date + 2.years
                                 }
                             }
                             
@@ -119,6 +151,7 @@ class DataController: ObservableObject {
                     }
                 }
             }.resume()
+//            }
 //        https://api.jsonbin.io/b/5f7e1e0565b18913fc5c408c/latest
 //        https://api.jsonbin.io/b/6135ab9f470d332594032449
         }
